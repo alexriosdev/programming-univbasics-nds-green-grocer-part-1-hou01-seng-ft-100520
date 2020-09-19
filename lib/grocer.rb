@@ -28,17 +28,17 @@ def consolidate_cart(cart)
       new_cart.each do |cart_item|
         if cart_item[:item] == scan_item[:item]
           cart_item[:count] += 1
-        else
-          cart_item[:count] = 1
-          new_cart << cart_item
         end
       end
-    # else
-    #   cart[count][:count] = 1
-    #   new_cart << cart[count]
-    # end
-    # count += 1
+    else
+      cart[count][:count] = 1
+      new_cart << cart[count]
+    end
+    count += 1
   end
   new_cart
 
 end
+
+
+  
